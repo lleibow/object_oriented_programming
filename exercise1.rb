@@ -1,15 +1,19 @@
 class BankAccount
   attr_accessor :balance, :interest_rates
 
-  def initialize(balance, interest_rates)
-    @balance = balance
-    @interest_rates = interest_rates
-  end
+    def initialize(balance, interest_rates)
+      @balance = balance
+      @interest_rates = interest_rates
+    end
 
-  def deposit(amount)
-    @balance += amount
+      def deposit(amount)
+        @balance += amount
+      end
+
+      def withdraw(amount)
+        @balance -= amount
+      end
   end
-end
 
 #create new BankAccount object
 bank_account= BankAccount.new(2000, 0.99)
@@ -20,4 +24,9 @@ puts bank_account.interest_rates
 
 #deposit
 puts "How much would you like to deposit?"
-puts bank_account.deposit(gets.to_i)
+puts "Your balance is now #{bank_account.deposit(gets.to_i)}"
+
+#withdraw
+
+puts "How much would you like to withdraw"
+puts "Your balance is now #{bank_account.withdraw(gets.to_i)}"
