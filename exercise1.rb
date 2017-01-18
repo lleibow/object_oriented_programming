@@ -13,6 +13,10 @@ class BankAccount
       def withdraw(amount)
         @balance -= amount
       end
+
+      def gain_interest(amount)
+        @balance *= @interest_rates
+      end
   end
 
 #create new BankAccount object
@@ -30,3 +34,6 @@ puts "Your balance is now #{bank_account.deposit(gets.to_i)}"
 
 puts "How much would you like to withdraw"
 puts "Your balance is now #{bank_account.withdraw(gets.to_i)}"
+
+#add interest_rates
+puts "With interest, your balance is now #{bank_account.interest_rates}"
