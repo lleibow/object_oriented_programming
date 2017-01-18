@@ -12,10 +12,15 @@ class Cat
 #4. Add method that returns hour of day
   def eats_at
     if @meal_time > 12
-      puts "#{@meal_time-12} pm"
+      return "#{@meal_time-12} pm"
     else
-      puts "#{@meal_time} am"
+      return "#{@meal_time} am"
     end
+  end
+
+#5. Added Meow method
+  def meow
+    return "My name is #{@name} and I eat #{@preferred_food} at #{eats_at}"
   end
 end
 
@@ -31,3 +36,7 @@ ziggy=Cat.new("Ziggy", "Human Meat", 15)
 marito=Cat.new("Marito", "Orange Peels", 23)
 
 ziggy.eats_at
+
+#6. Call meow on both kitties
+puts ziggy.meow
+puts marito.meow
