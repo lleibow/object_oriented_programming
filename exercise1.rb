@@ -7,7 +7,7 @@ class BankAccount
   end
 
   def deposit(amount)
-    @balance += amount.to_i
+    @balance += amount
   end
 end
 
